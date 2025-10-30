@@ -229,7 +229,7 @@ const Longread: React.FC<LongreadProps> = ({
                 </Text>
             </div>
 
-              <Text variant="subheader-1" className="subsection-title">
+              <Text id="sw-components" variant="subheader-1" className="subsection-title">
                 Основные компоненты архитектуры
               </Text>
 
@@ -393,7 +393,7 @@ const Longread: React.FC<LongreadProps> = ({
                 />
               </div>
 
-              <Text variant="subheader-1" className="subsection-title">
+              <Text id="personalization" variant="subheader-1" className="subsection-title">
                 Персонализация обучения
               </Text>
               <Text variant="body-1" className="paragraph">
