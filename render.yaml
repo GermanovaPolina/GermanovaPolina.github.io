@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: longread-app
+    env: static
+    buildCommand: |
+      rm -rf node_modules .npm-cache package-lock.json
+      npm cache clean --force
+      npm install --no-package-lock --no-save
+      npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
+      - key: NPM_CONFIG_CACHE
+        value: "/tmp/.npm"
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=4096"
+      - key: NPM_CONFIG_FUND
+        value: "false"
+      - key: NPM_CONFIG_AUDIT
+        value: "false"
+      - key: NPM_CONFIG_PACKAGE_LOCK
+        value: "false"
